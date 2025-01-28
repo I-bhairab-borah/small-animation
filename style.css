@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    height: 100%; /* Ensure the container takes full height */
+}
+
+.container {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: lightgray; /* Optional: for visibility */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: center; /* Center text inside the box horizontally */
+    align-items: center; /* Center text inside the box vertically */
+    color: white;
+    font-weight: bold;
+    animation: 3s spin ease-in-out 1s infinite alternate;
+    animation-play-state: paused;
+}
+.box:hover{
+    animation-play-state: running;
+}
+@keyframes spin{
+    0%{
+
+    }
+
+    50%{
+        scale: 2;
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+
+}
